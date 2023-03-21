@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import lxml
 
-class KeyWordExtraction():
+class KeywordExtractionFromWebPage():
 
     def __init__(self, url):
         self.url = url
@@ -20,6 +20,6 @@ class KeyWordExtraction():
 
 if __name__ == "__main__":
     url = 'https://en.wikipedia.org/wiki/List_of_SQL_reserved_words'
-    objKeyWordExtraction = KeyWordExtraction (url)
+    objKeyWordExtraction = KeywordExtractionFromWebPage(url)
     keyword_list = objKeyWordExtraction.get_sql_keyword_list()
     print (keyword_list)
