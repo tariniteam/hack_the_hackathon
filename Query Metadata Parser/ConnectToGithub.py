@@ -21,6 +21,7 @@ class ConnectToGithub():
                 self.list_of_files.append(link)
                 self.sql_scripts_df = self.sql_scripts_df.append(self.read_sql_scripts(link))
 
+        df = self.return_sql_script_data_frame()
         print("List of SQL Script Files", self.list_of_files)
         print("SQL Scripts DataFrame ", self.sql_scripts_df)
 
@@ -28,6 +29,10 @@ class ConnectToGithub():
         soup = BeautifulSoup(requests.get(url).text)
         for a in soup.find_all('a'):
             yield a['href']
+
+    def return_sql_script_data_frame(self):
+        df = self.sql_scripts_df
+        return df
 
     def read_sql_scripts(self, url):
         html_response = requests.get(url=url)
