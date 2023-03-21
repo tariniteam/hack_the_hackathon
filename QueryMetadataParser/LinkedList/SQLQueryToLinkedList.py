@@ -2,12 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import lxml
-from
+from QueryMetadataParser import ConnectToGithub
 
 class SQLQueryToLinkedList():
 
-    def __init__(self, base_github_folder):
-        self.base_github_folder = base_github_folder
+    def __init__(self, sql_query):
+        self.sql_query = sql_query
 
     def stringToListNode(stringTotal):
         previousNode = None
