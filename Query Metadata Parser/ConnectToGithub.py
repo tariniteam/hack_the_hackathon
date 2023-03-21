@@ -8,12 +8,16 @@ class ConnectToGithub():
     def __init__(self, url):
         self.url = url
 
-    def get_sql_keyword_list(self):
-       
-        return keyword_list
+    def get_sql_scripts(self):
+
+        return sql_scripts
 
 if __name__ == "__main__":
-    url = 'https://en.wikipedia.org/wiki/List_of_SQL_reserved_words'
+    url = 'https://github.com/tariniteam/hack_the_hackathon/tree/main/Query%20Metadata%20Parser/SQL%20Scripts'
     objConnectToGithub = ConnectToGithub(url)
-    keyword_list = objConnectToGithub.get_sql_keyword_list()
+    sql_scripts = objConnectToGithub.get_sql_keyword_list()
 
+
+
+#with open("myfile.csv", "w") as f:
+ #   f.write(resp.text)

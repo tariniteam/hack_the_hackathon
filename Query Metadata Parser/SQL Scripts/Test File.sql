@@ -1,0 +1,1 @@
+SELECT ColumnName1, ColumnName2 FROM STG.TableName WHERE ColumnName = 'Title'
